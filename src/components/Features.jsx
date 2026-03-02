@@ -1,68 +1,68 @@
 import React from 'react'
-import { MapPin, MessageCircle, Shield, Clock, Wrench, CreditCard, Brain, FileCheck } from 'lucide-react'
+import { Brain, Shield, MapPin, CreditCard, FileCheck, Clock } from 'lucide-react'
 
 const Features = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Assisted Pre-Diagnosis',
-      description: 'ARS Rapide provides Taglish-aware pre-diagnosis and preliminary cost guidance before booking.',
+      title: 'AI Pre-Check',
+      description: 'Understand likely issues before booking with clear, Taglish-friendly guidance.',
+      tag: 'For Owners',
       color: 'bg-primary-100 text-primary'
     },
     {
       icon: Shield,
       title: 'Verified Mechanics',
-      description: 'Mechanics go through identity and credential review before becoming visible to users.',
+      description: 'Only reviewed mechanics are shown, improving trust and reducing risky matches.',
+      tag: 'For Owners',
       color: 'bg-green-100 text-green-600'
     },
     {
       icon: MapPin,
-      title: 'Real-Time Tracking',
-      description: 'Track mechanic movement and booking status from acceptance through completion.',
-      color: 'bg-primary-100 text-primary'
+      title: 'Live Booking Tracking',
+      description: 'Track status from request to completion so users always know what is happening.',
+      tag: 'For Owners',
+      color: 'bg-blue-100 text-blue-600'
     },
     {
       icon: CreditCard,
       title: 'Transparent Costing',
-      description: 'Clear cost guidance helps reduce hidden fees and pricing uncertainty.',
+      description: 'Clear cost guidance helps reduce price surprises and overcharging concerns.',
+      tag: 'For Owners',
       color: 'bg-accent-yellow/20 text-secondary-900'
     },
     {
-      icon: MessageCircle,
-      title: 'Structured Messaging',
-      description: 'In-app communication stays linked to each booking for clearer service coordination.',
-      color: 'bg-orange-100 text-orange-600'
-    },
-    {
       icon: FileCheck,
-      title: 'Earnings and Impact Data',
-      description: 'Mechanic earnings history and pilot-level impact data support livelihood formalization.',
-      color: 'bg-red-100 text-red-600'
+      title: 'Work and Earnings Records',
+      description: 'Mechanics can track jobs and earnings while pilot teams review formalization data.',
+      tag: 'For Mechanics',
+      color: 'bg-purple-100 text-purple-700'
     },
     {
       icon: Clock,
-      title: 'Emergency Flow',
-      description: 'Urgency-aware workflows support breakdown cases and priority handling.',
+      title: 'Emergency Handling',
+      description: 'Urgency-aware flow helps prioritize breakdown cases and improves response clarity.',
+      tag: 'Operations',
       color: 'bg-indigo-100 text-indigo-600'
-    },
-    {
-      icon: Wrench,
-      title: 'Service Coverage',
-      description: 'Supports a broad range of automotive service scenarios during pilot operations.',
-      color: 'bg-pink-100 text-pink-600'
     }
   ]
 
   return (
-    <section id="features" className="py-20 md:py-32 bg-white">
+    <section id="features" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="section-title">
             Platform <span className="text-primary">Features</span>
           </h2>
           <p className="section-subtitle">
-            Core capabilities designed for transparent bookings, verified service, and stronger community trust
+            Six core features focused on trust, transparency, and practical service flow
           </p>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-2 mb-8">
+          <span className="px-3 py-1 rounded-button bg-primary-50 text-primary text-xs font-semibold">For Owners</span>
+          <span className="px-3 py-1 rounded-button bg-green-50 text-green-700 text-xs font-semibold">For Mechanics</span>
+          <span className="px-3 py-1 rounded-button bg-indigo-50 text-indigo-700 text-xs font-semibold">Operations</span>
         </div>
 
         <p className="md:hidden text-center text-sm text-subtitle mb-5">Swipe to explore features</p>
@@ -71,35 +71,39 @@ const Features = () => {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="min-w-[88%] snap-start group p-8 rounded-card bg-surface hover:bg-white hover:shadow-sm transition-all duration-300 border border-gray-100"
+              className="min-w-[88%] snap-start group p-7 rounded-card bg-surface border border-gray-100"
             >
-              <div className={`${feature.color} w-14 h-14 rounded-input flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300`}>
-                <feature.icon className="w-7 h-7" />
+              <div className={`${feature.color} w-12 h-12 rounded-input flex items-center justify-center mb-4`}>
+                <feature.icon className="w-6 h-6" />
               </div>
-
-              <h3 className="text-xl font-bold text-onSurface mb-3">{feature.title}</h3>
+              <span className="inline-block text-xs font-semibold text-subtitle bg-white border border-border rounded-button px-3 py-1 mb-3">
+                {feature.tag}
+              </span>
+              <h3 className="text-xl font-bold text-onSurface mb-2">{feature.title}</h3>
               <p className="text-subtitle leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="group p-8 rounded-card bg-surface hover:bg-white hover:shadow-sm transition-all duration-300 border border-gray-100"
+              className="group p-7 rounded-card bg-surface border border-gray-100 hover:bg-white hover:shadow-sm transition-all duration-300"
             >
-              <div className={`${feature.color} w-14 h-14 rounded-input flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300`}>
-                <feature.icon className="w-7 h-7" />
+              <div className={`${feature.color} w-12 h-12 rounded-input flex items-center justify-center mb-4`}>
+                <feature.icon className="w-6 h-6" />
               </div>
-
-              <h3 className="text-xl font-bold text-onSurface mb-3">{feature.title}</h3>
+              <span className="inline-block text-xs font-semibold text-subtitle bg-white border border-border rounded-button px-3 py-1 mb-3">
+                {feature.tag}
+              </span>
+              <h3 className="text-xl font-bold text-onSurface mb-2">{feature.title}</h3>
               <p className="text-subtitle leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-16">
+        <div className="text-center mt-12">
           <div className="inline-flex items-center gap-2 bg-accent-yellow/20 text-secondary-900 px-6 py-3 rounded-button border border-accent-yellow/30">
             <img src="/logo.png" alt="ARS Logo" className="w-6 h-6 object-contain" />
             <span className="font-semibold">Feature scope is being finalized for pilot launch</span>

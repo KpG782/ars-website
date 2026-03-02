@@ -1,7 +1,12 @@
 import React from 'react'
-import { AlertCircle, TrendingDown, Users, DollarSign } from 'lucide-react'
+import { AlertCircle, TrendingDown } from 'lucide-react'
 
 const ProblemStatement = () => {
+  const vehicleOwnersImage =
+    '/stressed.jpg'
+  const mechanicsImage =
+    '/mechanic.jpg'
+
   const problems = {
     customers: [
       'Unverified mechanics with no credential checks',
@@ -34,12 +39,15 @@ const ProblemStatement = () => {
 
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-red-100">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 bg-red-100 text-red-600 rounded-xl flex items-center justify-center">
-                <Users className="w-7 h-7" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900">Vehicle Owners Face</h3>
+            <div className="mb-6">
+              <img
+                src={vehicleOwnersImage}
+                alt="Vehicle owner with car issue"
+                className="w-full h-48 object-cover rounded-card border border-red-100"
+                loading="lazy"
+              />
             </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Vehicle Owners Face</h3>
             <ul className="space-y-4">
               {problems.customers.map((problem) => (
                 <li key={problem} className="flex items-start gap-3">
@@ -51,12 +59,15 @@ const ProblemStatement = () => {
           </div>
 
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-orange-100">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center">
-                <DollarSign className="w-7 h-7" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900">Independent Mechanics Face</h3>
+            <div className="mb-6">
+              <img
+                src={mechanicsImage}
+                alt="Independent mechanic working in a shop"
+                className="w-full h-48 object-cover rounded-card border border-orange-100"
+                loading="lazy"
+              />
             </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Independent Mechanics Face</h3>
             <ul className="space-y-4">
               {problems.mechanics.map((problem) => (
                 <li key={problem} className="flex items-start gap-3">
