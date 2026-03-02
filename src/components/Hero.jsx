@@ -71,15 +71,17 @@ const Hero = () => {
 
                 <div className="p-4 sm:p-5">
                   <div className="rounded-card overflow-hidden border border-border bg-black">
-                    <iframe
-                      className="w-full aspect-video"
-                      src="https://www.youtube.com/embed/09zIjp0qBRs"
-                      title="ARS Mechanic Service Demo"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                    />
+                    <video
+                      className="w-full aspect-video object-cover"
+                      src="/ARS_VIDEO.mp4"
+                      poster="/logo.png"
+                      controls
+                      muted
+                      playsInline
+                      preload="metadata"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
                   </div>
                 </div>
               </div>
