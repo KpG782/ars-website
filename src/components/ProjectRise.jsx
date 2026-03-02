@@ -2,37 +2,6 @@ import React from 'react'
 import { TrendingUp, Users, Building2 } from 'lucide-react'
 
 const ProjectRise = () => {
-  const sdgs = [
-    {
-      number: '8',
-      title: 'Decent Work and Economic Growth',
-      description: 'Formalizing mechanic income and creating stable digital demand',
-      logo: 'https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-08.jpg',
-      color: '#A21942'
-    },
-    {
-      number: '10',
-      title: 'Reduced Inequalities',
-      description: 'Increasing economic inclusion for informal workers',
-      logo: 'https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-10.jpg',
-      color: '#DD1367'
-    },
-    {
-      number: '1',
-      title: 'No Poverty',
-      description: 'Supporting poverty reduction through structured livelihood',
-      logo: 'https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-01.jpg',
-      color: '#E5243B'
-    },
-    {
-      number: '11',
-      title: 'Sustainable Cities and Communities',
-      description: 'Improving trusted city infrastructure systems',
-      logo: 'https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-11.jpg',
-      color: '#FD9D24'
-    }
-  ]
-
   return (
     <section id="project-rise" className="py-20 md:py-32 bg-gradient-to-br from-gray-900 via-primary-900 to-gray-900 text-white relative overflow-hidden">
       {/* Background Decorations */}
@@ -76,36 +45,8 @@ const ProjectRise = () => {
           </div>
         </div>
 
-        {/* SDG Goals */}
-        <div>
-          <h3 className="text-3xl font-bold text-center mb-12">
-            Supporting UN Sustainable Development Goals
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {sdgs.map((sdg, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-card overflow-hidden border border-white/20 hover:bg-white/20 transition-all duration-300 group"
-              >
-                <div className="bg-white/5 p-4 flex items-center justify-center group-hover:scale-105 transition-transform">
-                  <img 
-                    src={sdg.logo} 
-                    alt={`SDG ${sdg.number}: ${sdg.title}`}
-                    className="w-24 h-24 object-contain rounded-input"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-6">
-                  <h4 className="text-lg font-bold mb-3">{sdg.title}</h4>
-                  <p className="text-gray-300 text-sm leading-relaxed">{sdg.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* Key Features */}
-        <div className="mt-16 grid md:grid-cols-3 gap-8">
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           <div className="text-center">
             <div className="w-16 h-16 bg-primary rounded-card flex items-center justify-center mx-auto mb-4">
               <TrendingUp className="w-8 h-8" />

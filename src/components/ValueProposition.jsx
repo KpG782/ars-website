@@ -102,8 +102,7 @@ const ValueProposition = () => {
           <div className="bg-gradient-to-br from-primary to-primary-600 rounded-hero p-8 md:p-12 text-white">
             <h3 className="text-3xl font-bold mb-4">Urban Resilience</h3>
             <p className="text-xl text-primary-100 max-w-3xl mx-auto">
-              ARS strengthens essential service reliability within cities, contributing directly to SDG 11: 
-              Sustainable Cities and Communities
+              ARS strengthens essential service reliability within cities through trusted digital infrastructure, transparent workflows, and stronger mechanic livelihood pathways.
             </p>
           </div>
         </div>

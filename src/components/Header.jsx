@@ -16,6 +16,7 @@ const Header = () => {
   const navLinks = [
     { name: 'Project RISE', href: '#project-rise' },
     { name: 'Features', href: '#features' },
+    { name: 'Data Sources', href: '#data-sources' },
     { name: 'How It Works', href: '#how-it-works' },
     { name: 'Team', href: '#team' },
     { name: 'FAQ', href: '#faq' },
@@ -42,7 +43,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-7">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -55,7 +56,7 @@ const Header = () => {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <a href="#faq" className="btn-primary">
               Learn More
             </a>
@@ -63,7 +64,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-subtitle hover:text-primary"
+            className="lg:hidden text-subtitle hover:text-primary"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -72,7 +73,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 bg-white rounded-card shadow-sm">
+          <div className="lg:hidden mt-4 py-4 bg-white rounded-card shadow-sm">
             <nav className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <a
