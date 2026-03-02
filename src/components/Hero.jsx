@@ -1,5 +1,5 @@
 import React from 'react'
-import { MapPin } from 'lucide-react'
+import { PlayCircle } from 'lucide-react'
 
 const Hero = () => {
   return (
@@ -59,27 +59,27 @@ const Hero = () => {
           </div>
 
           <div className="relative">
-            <div className="relative mx-auto max-w-md lg:max-w-lg">
-              <div className="bg-secondary-900 rounded-[3rem] p-3 shadow-lg transform hover:scale-105 transition-transform duration-300">
-                <div className="bg-white rounded-[2.5rem] overflow-hidden">
-                  <div className="bg-secondary-900 h-8 flex items-center justify-between px-6 text-white text-xs">
-                    <span>9:41</span>
-                    <span>.....</span>
+            <div className="relative mx-auto max-w-xl">
+              <div className="bg-white rounded-hero border border-border shadow-sm overflow-hidden">
+                <div className="px-5 sm:px-6 py-4 border-b border-border bg-surface flex items-center justify-between gap-3">
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold text-onSurface">Mechanic Service Demo</h3>
+                    <p className="text-sm text-subtitle">ARS booking and service flow preview</p>
                   </div>
+                  <PlayCircle className="w-6 h-6 text-primary flex-shrink-0" />
+                </div>
 
-                  <div className="bg-gradient-to-br from-primary-50 to-white p-5 sm:p-6 h-[500px] sm:h-[560px] md:h-[600px] flex flex-col">
-                    <div className="mb-6">
-                      <h3 className="text-2xl font-bold text-onSurface mb-2">Find a Mechanic</h3>
-                      <p className="text-subtitle">Real-time location tracking</p>
-                    </div>
-
-                    <div className="flex-1 bg-gradient-to-br from-primary-200 to-primary-100 rounded-card flex items-center justify-center shadow-inner">
-                      <MapPin className="w-16 h-16 text-primary animate-bounce" />
-                    </div>
-
-                    <button className="mt-6 bg-primary hover:bg-primary-600 text-white py-4 rounded-button font-semibold shadow-sm">
-                      Request Service
-                    </button>
+                <div className="p-4 sm:p-5">
+                  <div className="rounded-card overflow-hidden border border-border bg-black">
+                    <iframe
+                      className="w-full aspect-video"
+                      src="https://www.youtube.com/embed/09zIjp0qBRs"
+                      title="ARS Mechanic Service Demo"
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
                   </div>
                 </div>
               </div>

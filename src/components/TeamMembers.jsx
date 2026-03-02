@@ -29,20 +29,36 @@ const TeamMembers = () => {
           </p>
         </div>
 
-        {/* Team Members Grid */}
+        {/* Team Members */}
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {members.map((member, index) => (
+          <p className="md:hidden text-center text-sm text-subtitle mb-5">Swipe to explore team</p>
+
+          <div className="md:hidden -mx-4 px-4 flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-2">
+            {members.map((member) => (
               <div
-                key={index}
+                key={member}
+                className="min-w-[78%] snap-start bg-gradient-to-br from-primary-50 to-surface rounded-card p-6 text-center border border-gray-100"
+              >
+                <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
+                  {member.split(' ')[0].charAt(0)}
+                  {member.split(' ')[member.split(' ').length - 1].charAt(0)}
+                </div>
+                <h3 className="font-semibold text-onSurface text-sm leading-relaxed">{member}</h3>
+              </div>
+            ))}
+          </div>
+
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {members.map((member) => (
+              <div
+                key={member}
                 className="bg-gradient-to-br from-primary-50 to-surface rounded-card p-6 text-center hover:shadow-sm transition-all duration-300 border border-gray-100 group"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl font-bold group-hover:scale-105 transition-transform">
-                  {member.split(' ')[0].charAt(0)}{member.split(' ')[member.split(' ').length - 1].charAt(0)}
+                  {member.split(' ')[0].charAt(0)}
+                  {member.split(' ')[member.split(' ').length - 1].charAt(0)}
                 </div>
-                <h3 className="font-semibold text-onSurface text-sm leading-relaxed">
-                  {member}
-                </h3>
+                <h3 className="font-semibold text-onSurface text-sm leading-relaxed">{member}</h3>
               </div>
             ))}
           </div>
