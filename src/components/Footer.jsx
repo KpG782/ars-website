@@ -1,5 +1,5 @@
 import React from 'react'
-import { Wrench, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react'
+import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -7,22 +7,20 @@ const Footer = () => {
   const footerLinks = {
     product: [
       { name: 'Project RISE', href: '#project-rise' },
+      { name: 'Problem Statement', href: '#problem-statement' },
       { name: 'Features', href: '#features' },
-      { name: 'How It Works', href: '#how-it-works' },
       { name: 'Technical Architecture', href: '#technical-architecture' },
-      { name: 'Value Proposition', href: '#value-proposition' }
+      { name: 'How It Works', href: '#how-it-works' }
     ],
     company: [
       { name: 'Team', href: '#team' },
+      { name: 'Value Proposition', href: '#value-proposition' },
       { name: 'Projected Outcomes', href: '#projected-outcomes' },
-      { name: 'For Customers', href: '#for-customers' },
       { name: 'For Mechanics', href: '#for-mechanics' }
     ],
     support: [
       { name: 'FAQ', href: '#faq' },
-      { name: 'Pricing', href: '#pricing' },
-      { name: 'Download', href: '#download' },
-      { name: 'Contact Us', href: '#download' }
+      { name: 'Development Status', href: '#project-rise' }
     ]
   }
 
@@ -40,10 +38,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="bg-primary-600 p-2 rounded-lg">
-                <Wrench className="h-6 w-6 text-white" />
-              </div>
+            <div className="flex items-center space-x-3 mb-6">
+              <img 
+                src="/logo.png" 
+                alt="ARS Logo" 
+                className="h-12 w-12 object-contain"
+              />
               <span className="text-2xl font-bold text-white">ARS</span>
             </div>
             
@@ -54,11 +54,11 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div className="space-y-3">
-              <a href="mailto:support@ars.com" className="flex items-center gap-2 text-gray-400 hover:text-primary-400 transition-colors">
+              <a href="mailto:support@ars.com" className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors">
                 <Mail className="w-4 h-4" />
                 <span className="text-sm">support@ars.com</span>
               </a>
-              <a href="tel:+1234567890" className="flex items-center gap-2 text-gray-400 hover:text-primary-400 transition-colors">
+              <a href="tel:+1234567890" className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors">
                 <Phone className="w-4 h-4" />
                 <span className="text-sm">+1 (234) 567-890</span>
               </a>
@@ -77,7 +77,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-primary-400 transition-colors text-sm"
+                    className="text-gray-400 hover:text-primary transition-colors text-sm"
                   >
                     {link.name}
                   </a>
@@ -94,7 +94,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-primary-400 transition-colors text-sm"
+                    className="text-gray-400 hover:text-primary transition-colors text-sm"
                   >
                     {link.name}
                   </a>
@@ -111,7 +111,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-primary-400 transition-colors text-sm"
+                    className="text-gray-400 hover:text-primary transition-colors text-sm"
                   >
                     {link.name}
                   </a>
@@ -138,7 +138,7 @@ const Footer = () => {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110"
+                  className="w-10 h-10 bg-gray-800 hover:bg-primary rounded-button flex items-center justify-center transition-all duration-300"
                 >
                   <social.icon className="w-5 h-5" />
                 </a>

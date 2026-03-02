@@ -57,11 +57,11 @@ const TechnicalArchitecture = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 rounded-2xl mb-6">
-            <Brain className="w-8 h-8" />
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-card mb-6">
+            <img src="/logo.png" alt="ARS Logo" className="w-10 h-10 object-contain" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            ARS <span className="text-primary-400">Rapide</span>
+            ARS <span className="text-primary-300">Rapide</span>
           </h2>
           <p className="text-xl text-gray-300 mb-4">
             Agentic RAG AI System
@@ -73,31 +73,31 @@ const TechnicalArchitecture = () => {
 
         {/* Key Features */}
         <div className="max-w-4xl mx-auto mb-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-white/20">
+          <div className="bg-white/10 backdrop-blur-sm rounded-hero p-8 md:p-12 border border-white/20">
             <h3 className="text-2xl font-bold mb-6">Unlike Traditional RAG Systems</h3>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-primary-400 rounded-full mt-2"></div>
+                <div className="w-2 h-2 bg-primary-300 rounded-full mt-2"></div>
                 <p className="text-gray-200">Normalizes Taglish automotive language</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-primary-400 rounded-full mt-2"></div>
+                <div className="w-2 h-2 bg-primary-300 rounded-full mt-2"></div>
                 <p className="text-gray-200">Classifies user intent</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-primary-400 rounded-full mt-2"></div>
+                <div className="w-2 h-2 bg-primary-300 rounded-full mt-2"></div>
                 <p className="text-gray-200">Routes through LangGraph state machine</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-primary-400 rounded-full mt-2"></div>
+                <div className="w-2 h-2 bg-primary-300 rounded-full mt-2"></div>
                 <p className="text-gray-200">Separates diagnosis and cost estimation</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-primary-400 rounded-full mt-2"></div>
+                <div className="w-2 h-2 bg-primary-300 rounded-full mt-2"></div>
                 <p className="text-gray-200">Outputs structured JSON responses</p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-primary-400 rounded-full mt-2"></div>
+                <div className="w-2 h-2 bg-primary-300 rounded-full mt-2"></div>
                 <p className="text-gray-200">Deterministic agentic workflow</p>
               </div>
             </div>
@@ -111,14 +111,14 @@ const TechnicalArchitecture = () => {
             <div className="flex flex-col gap-4">
               {workflow.map((step, index) => (
                 <div key={index} className="flex items-center gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center font-bold">
+                  <div className="flex-shrink-0 w-10 h-10 bg-primary rounded-full flex items-center justify-center font-bold">
                     {index + 1}
                   </div>
-                  <div className="flex-1 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                  <div className="flex-1 bg-white/10 backdrop-blur-sm rounded-input p-4 border border-white/20">
                     <p className="text-gray-200">{step}</p>
                   </div>
                   {index < workflow.length - 1 && (
-                    <div className="w-px h-8 bg-primary-400/50"></div>
+                    <div className="w-px h-8 bg-primary-300/50"></div>
                   )}
                 </div>
               ))}
@@ -133,13 +133,13 @@ const TechnicalArchitecture = () => {
             {techStack.map((tech, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+                className="bg-white/10 backdrop-blur-sm rounded-card p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
               >
-                <div className="w-14 h-14 bg-primary-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 bg-primary rounded-input flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
                   <tech.icon className="w-7 h-7" />
                 </div>
                 <h4 className="text-xl font-bold mb-2">{tech.title}</h4>
-                <p className="text-primary-400 font-semibold mb-2">{tech.tech}</p>
+                <p className="text-primary-300 font-semibold mb-2">{tech.tech}</p>
                 <p className="text-gray-300 text-sm leading-relaxed">{tech.description}</p>
               </div>
             ))}
@@ -148,9 +148,9 @@ const TechnicalArchitecture = () => {
 
         {/* Scalability Note */}
         <div className="mt-16 text-center">
-          <div className="max-w-3xl mx-auto bg-primary-600/20 backdrop-blur-sm rounded-2xl p-8 border border-primary-400/30">
+          <div className="max-w-3xl mx-auto bg-primary/20 backdrop-blur-sm rounded-card p-8 border border-primary-300/30">
             <p className="text-lg text-gray-200">
-              <span className="font-bold text-primary-400">Scalability Pathway:</span> Migration to FAISS or hosted 
+              <span className="font-bold text-primary-300">Scalability Pathway:</span> Migration to FAISS or hosted 
               vector databases available as knowledge base grows, ensuring enterprise-grade performance.
             </p>
           </div>

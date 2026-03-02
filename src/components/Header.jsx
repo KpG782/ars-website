@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Menu, X, Wrench } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -32,11 +32,13 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="bg-primary-600 p-2 rounded-lg">
-              <Wrench className="h-6 w-6 text-white" />
-            </div>
-            <span className="text-2xl font-bold text-gray-900">ARS</span>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/logo.png" 
+              alt="ARS Logo" 
+              className="h-10 w-10 object-contain"
+            />
+              <span className="text-xl font-extrabold text-secondary-900">ARS</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -45,7 +47,7 @@ const Header = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-700 hover:text-primary-600 font-medium transition-colors"
+                className="text-subtitle hover:text-primary font-medium transition-colors"
               >
                 {link.name}
               </a>
@@ -54,14 +56,14 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <a href="#download" className="btn-primary">
-              Download App
+            <a href="#faq" className="btn-primary">
+              Learn More
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-700 hover:text-primary-600"
+            className="md:hidden text-subtitle hover:text-primary"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -70,24 +72,24 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 bg-white rounded-lg shadow-lg">
+          <div className="md:hidden mt-4 py-4 bg-white rounded-card shadow-sm">
             <nav className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-700 hover:text-primary-600 font-medium px-4 py-2 transition-colors"
+                  className="text-subtitle hover:text-primary hover:bg-primary-50 font-medium px-4 py-2 transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
                 </a>
               ))}
               <a 
-                href="#download" 
+                href="#faq" 
                 className="mx-4 btn-primary text-center"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Download App
+                Learn More
               </a>
             </nav>
           </div>

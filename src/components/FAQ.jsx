@@ -40,11 +40,11 @@ const FAQ = () => {
   ]
 
   return (
-    <section id="faq" className="py-20 md:py-32 bg-gradient-to-br from-primary-50 via-white to-blue-50">
+    <section id="faq" className="py-20 md:py-32 bg-gradient-to-br from-primary-50 via-white to-surface">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 text-primary-600 rounded-2xl mb-6">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 text-primary rounded-card mb-6">
             <HelpCircle className="w-8 h-8" />
           </div>
           <h2 className="section-title">
@@ -60,17 +60,17 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="mb-4 bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 transition-all duration-300 hover:shadow-lg"
+              className="mb-4 bg-white rounded-card shadow-sm overflow-hidden border border-gray-100 transition-all duration-300 hover:shadow-md"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+                className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 hover:bg-primary-50 transition-colors"
               >
-                <span className="font-semibold text-gray-900 text-lg">
+                <span className="font-semibold text-onSurface text-lg">
                   {faq.question}
                 </span>
                 <ChevronDown
-                  className={`w-6 h-6 text-primary-600 flex-shrink-0 transition-transform duration-300 ${
+                  className={`w-6 h-6 text-primary flex-shrink-0 transition-transform duration-300 ${
                     openIndex === index ? 'transform rotate-180' : ''
                   }`}
                 />
@@ -81,7 +81,7 @@ const FAQ = () => {
                   openIndex === index ? 'max-h-96' : 'max-h-0'
                 }`}
               >
-                <div className="px-6 pb-5 pt-2 text-gray-600 leading-relaxed">
+                <div className="px-6 pb-5 pt-2 text-subtitle leading-relaxed">
                   {faq.answer}
                 </div>
               </div>
@@ -91,12 +91,12 @@ const FAQ = () => {
 
         {/* Contact CTA */}
         <div className="text-center mt-12">
-          <p className="text-gray-600 mb-4">Still have questions?</p>
+          <p className="text-subtitle mb-4">Want to know more about Project RISE?</p>
           <a
-            href="#download"
-            className="inline-flex items-center gap-2 text-primary-600 font-semibold hover:text-primary-700 transition-colors"
+            href="#project-rise"
+            className="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary-600 transition-colors"
           >
-            Contact our support team
+            Explore Project RISE
             <span>→</span>
           </a>
         </div>

@@ -7,7 +7,7 @@ const Features = () => {
       icon: Brain,
       title: 'AI-Powered Diagnostics',
       description: 'ARS Rapide provides pre-diagnosis and cost estimation in Taglish before booking, reducing information asymmetry.',
-      color: 'bg-purple-100 text-purple-600'
+      color: 'bg-primary-100 text-primary'
     },
     {
       icon: Shield,
@@ -19,13 +19,13 @@ const Features = () => {
       icon: MapPin,
       title: 'Real-Time Tracking',
       description: 'Track your mechanic\'s location in real-time through structured booking lifecycle from acceptance to completion.',
-      color: 'bg-blue-100 text-blue-600'
+      color: 'bg-primary-100 text-primary'
     },
     {
       icon: CreditCard,
       title: 'Transparent Pricing',
       description: 'Get upfront cost estimates before booking. No hidden fees, no overcharging—just fair, transparent pricing.',
-      color: 'bg-yellow-100 text-yellow-600'
+      color: 'bg-accent-yellow/20 text-secondary-900'
     },
     {
       icon: MessageCircle,
@@ -59,7 +59,7 @@ const Features = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="section-title">
-            Platform <span className="text-primary-600">Features</span>
+            Platform <span className="text-primary">Features</span>
           </h2>
           <p className="section-subtitle">
             Civic-tech innovation designed to formalize automotive services and strengthen community resilience
@@ -71,17 +71,17 @@ const Features = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100"
+              className="group p-8 rounded-card bg-surface hover:bg-white hover:shadow-sm transition-all duration-300 border border-gray-100"
             >
-              <div className={`${feature.color} w-14 h-14 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`${feature.color} w-14 h-14 rounded-input flex items-center justify-center mb-6 group-hover:scale-105 transition-transform duration-300`}>
                 <feature.icon className="w-7 h-7" />
               </div>
               
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-xl font-bold text-onSurface mb-3">
                 {feature.title}
               </h3>
               
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-subtitle leading-relaxed">
                 {feature.description}
               </p>
             </div>
@@ -90,9 +90,10 @@ const Features = () => {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <a href="#download" className="btn-primary inline-block">
-            Start Using ARS Today
-          </a>
+          <div className="inline-flex items-center gap-2 bg-accent-yellow/20 text-secondary-900 px-6 py-3 rounded-button border border-accent-yellow/30">
+            <img src="/logo.png" alt="ARS Logo" className="w-6 h-6 object-contain" />
+            <span className="font-semibold">🚧 Platform currently in development</span>
+          </div>
         </div>
       </div>
     </section>
